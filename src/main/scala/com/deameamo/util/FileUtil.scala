@@ -36,12 +36,6 @@ object FileUtil {
     }
   }
   
-  def getWriter(filePath: String): PrintWriter = getWriter(filePath, "utf-8")
-  
-  def getWriter(filePath: String, appending: Boolean): PrintWriter = getWriter(filePath, "utf-8", appending)
-  
-  def getWriter(filePath: String, charset: String): PrintWriter = getWriter(filePath, charset)
-  
   def getWriter(filePath: String, charset: String = "utf-8", appending: Boolean = false): PrintWriter = {
     try {
       val out = new PrintWriter(new OutputStreamWriter(new FileOutputStream(filePath, appending), charset))

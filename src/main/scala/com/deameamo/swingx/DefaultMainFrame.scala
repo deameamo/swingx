@@ -14,7 +14,8 @@ class DefaultMainFrame extends JFrame with WindowStateListener {
   
 //  addWindowStateListener(this)
   
-  val plaf = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel"
+//  val plaf = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel"
+  val plaf = "com.jtattoo.plaf.aero.AeroLookAndFeel"
   try {
     UIManager.setLookAndFeel(plaf)
     SwingUtilities.updateComponentTreeUI(this)
